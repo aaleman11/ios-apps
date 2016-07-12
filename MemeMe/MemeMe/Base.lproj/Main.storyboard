@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G7r-8S-y9N">
+                                <rect key="frame" x="180" y="236" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="zXm-Gv-LtQ"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="z9o-xl-Ra5">
+                                <rect key="frame" x="0.0" y="556" width="600" height="0.0"/>
+                            </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CJf-uP-IUt">
+                                <rect key="frame" x="0.0" y="504" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Pick" id="VJD-mz-L2A">
+                                        <connections>
+                                            <action selector="pickAnImageFromAlbum:" destination="BYZ-38-t0r" id="Bm5-g1-UDW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Camera" id="fTq-3s-Tdz">
+                                        <connections>
+                                            <action selector="pickAnImageFromCamera:" destination="BYZ-38-t0r" id="MLq-l6-GIz"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="GKL-Wx-NHY" userLabel="Top Text">
+                                <rect key="frame" x="31" y="49" width="520" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zfr-GX-b0n">
+                                <rect key="frame" x="-60" y="-12" width="600" height="44"/>
+                                <items>
+                                    <navigationItem id="OYh-I5-rq6" userLabel="Navigation Bar"/>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="hta-0H-39g" userLabel="Bottom Text">
+                                <rect key="frame" x="20" y="428" width="520" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZCA-3r-nRy">
+                                <rect key="frame" x="0.0" y="561" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Item" id="gNC-lX-Pte" userLabel="Toolbar"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="z9o-xl-Ra5" firstAttribute="trailing" secondItem="CJf-uP-IUt" secondAttribute="trailing" id="7q1-Zl-NER"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CJf-uP-IUt" secondAttribute="bottom" constant="8" id="GIo-Yq-lL2"/>
+                            <constraint firstItem="z9o-xl-Ra5" firstAttribute="top" secondItem="wfy-db-euE" secondAttribute="top" id="Gva-rb-ewI"/>
+                            <constraint firstItem="z9o-xl-Ra5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="S2y-eg-oAV"/>
+                            <constraint firstAttribute="trailing" secondItem="z9o-xl-Ra5" secondAttribute="trailing" id="esd-fF-9zf"/>
+                            <constraint firstItem="z9o-xl-Ra5" firstAttribute="centerX" secondItem="G7r-8S-y9N" secondAttribute="centerX" id="iit-vT-1nw"/>
+                            <constraint firstItem="z9o-xl-Ra5" firstAttribute="leading" secondItem="CJf-uP-IUt" secondAttribute="leading" id="pLb-fp-oID"/>
+                            <constraint firstItem="z9o-xl-Ra5" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="rUH-Fz-qGA"/>
+                            <constraint firstItem="G7r-8S-y9N" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uNo-DC-x6f"/>
+                            <constraint firstItem="G7r-8S-y9N" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="216" id="wg4-gF-OYy"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="ImagePickerView" destination="G7r-8S-y9N" id="qgD-Vp-BYx"/>
+                        <outlet property="bottomText" destination="hta-0H-39g" id="Jz4-Nd-q51"/>
+                        <outlet property="cameraButton" destination="fTq-3s-Tdz" id="AoC-JE-Ib6"/>
+                        <outlet property="imagePickerView" destination="G7r-8S-y9N" id="AVy-S8-ATH"/>
+                        <outlet property="navigationBar" destination="OYh-I5-rq6" id="bZw-U0-q0E"/>
+                        <outlet property="toolbar" destination="gNC-lX-Pte" id="jQq-VL-tCq"/>
+                        <outlet property="topText" destination="GKL-Wx-NHY" id="dfz-fP-WNf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="288" y="334"/>
+        </scene>
+    </scenes>
+</document>
